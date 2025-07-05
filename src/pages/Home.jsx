@@ -10,7 +10,7 @@ const Home = () => {
         <>
             <Hero />
             <HomeCards />
-            <JobListings isHome={true} />
+            <JobListings qtyToShow={3} />
             <ViewAllJobs />
         </>
     )
