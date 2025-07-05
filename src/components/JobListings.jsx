@@ -18,7 +18,9 @@ const JobListings = ({ qtyToShow = -1 }) => {
                 //     setTimeout(() => resolve(jobs), 1000);
                 // });
 
-                const response = await fetch('http://localhost:8000/jobs');
+                let url = '/api/jobs' + (qtyToShow > -1 ? '?_limit=${qtyToShow}' : '')
+
+                const response = await fetch(url);
 
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
